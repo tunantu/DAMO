@@ -5,4 +5,4 @@ This papers aims to mitigate hallucinations in Vision-Language Models (VLMs) by 
 
 Here is the paper link: https://openreview.net/forum?id=JUr0YOMvZA
 
-<img src="images/architecture.png" width="800" alt="DAMO"/><br/>
+<img src="images/architecture.png" width="500" alt="DAMO"/><br/>
