@@ -5,4 +5,16 @@ This papers aims to mitigate hallucinations in Vision-Language Models (VLMs) by 
 
 Here is the paper link: https://openreview.net/forum?id=JUr0YOMvZA
 
-<img src="images/architecture.png" width="500" alt="DAMO"/><br/>
+<img src="images/architecture.png" width="400" alt="DAMO"/><br/>
+
+## Usage
+
+
+## Citation
+```
+@inproceedings{wangdamo,
+  title={DAMO: Decoding by Accumulating Activations Momentum for Mitigating Hallucinations in Vision-Language Models},
+  author={Wang, Kaishen and Gu, Hengrui and Gao, Meijun and Zhou, Kaixiong},
+  booktitle={The Thirteenth International Conference on Learning Representations}
+}
+```
