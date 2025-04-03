@@ -7,9 +7,16 @@ Here is the paper link: https://openreview.net/forum?id=JUr0YOMvZA
 
 <img src="images/architecture.png" width="400" alt="DAMO"/><br/>
 
-## Usage
+## Usage (Taking LLaVA1.5 as an example)
 
-
+1) Please create the llava 1.5 env from official repo:
+   ```
+   https://github.com/haotian-liu/LLaVA.git
+   ```
+2) Please replace the `LLaVA/llava/model/language_model/llava_llama.py` with ours. 
+3) Please replace the `LLaVA/llava/model/llava_arch.py` with ours. 
+4) Please replace the `LLaVA/llava/eval/run_llava.py` with ours.
+5) Then, for MME benchmark, you could run `llava_mme.py` to evaluate MME benchmark.
 ## Citation
 ```
 @inproceedings{wangdamo,
