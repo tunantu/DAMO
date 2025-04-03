@@ -185,29 +185,6 @@ class LlamaModel(LlamaModelorg):
                 if momentum_decoding_flag:
                     hidden_states[:, -1:, :] = hidden_states[:, -1:, :] - current_increasement + prev_hidden_states
 
-
-            # if idx>=16:   ##POPE
-            #     delta_momentum = 0.7
-            #     prev_hidden_states_momentum = 0.2
-            #     logits_3 = lm_head(hidden_states[:,-1:,:])
-            #     logits_2 = lm_head(all_hidden_states[-1][:,-1:,:])
-            #     logits_1 = lm_head(all_hidden_states[-2][:,-1:,:])
-            #     P_3 = torch.nn.functional.softmax(logits_3, dim=-1)
-            #     P_2 = torch.nn.functional.softmax(logits_2, dim=-1)
-            #     P_1 = torch.nn.functional.softmax(logits_1, dim=-1)
-            #     delta_p2 = P_3-P_2
-            #     delta_p1 = P_2-P_1
-            #     delta_hidden_states = delta_momentum * delta_hidden_states + (1-delta_momentum) * delta_p1
-            #     cosine_similarity = self.custom_cosine_similarity(delta_p2, delta_hidden_states)
-
-            #     if cosine_similarity<-0.3:
-            #         momentum_decoding_flag=True
-            #         prev_hidden_states_momentum = 0.4
-            #     prev_hidden_states = prev_hidden_states_momentum * prev_hidden_states + (1-prev_hidden_states_momentum) * current_incre
-            #     if momentum_decoding_flag:
-            #         hidden_states[:, -1:, :] = hidden_states[:, -1:, :] - current_incre + prev_hidden_states
-
-
             if use_cache:
                 next_decoder_cache += (layer_outputs[2 if output_attentions else 1],)
 
