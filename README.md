@@ -16,7 +16,7 @@ Here is the paper link: https://openreview.net/forum?id=JUr0YOMvZA
 2) Please replace the `LLaVA/llava/model/language_model/llava_llama.py` with ours. 
 3) Please replace the `LLaVA/llava/model/llava_arch.py` with ours. 
 4) Please replace the `LLaVA/llava/eval/run_llava.py` with ours.
-5) Then, for MME benchmark, you could run `llava_mme.py` to evaluate MME benchmark.
+5) Then, for MME benchmark, you could run `CUDA_VISIBLE_DEVICES=0 python llava_mme.py --output_dir DAMO` to evaluate MME benchmark.
 ## Citation
 ```
 @inproceedings{wangdamo,
